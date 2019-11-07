@@ -1,0 +1,103 @@
+.card {
+  width: 288px;
+  height: 453px;
+  background-color: $blue;
+  background-image: url("../img/icon.svg");
+  position: relative;
+  padding-top: 70px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  &--green {
+    background-color: $green;
+  }
+}
+
+.card__decor {
+  position: relative;
+  transition: all 1s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card__flags {
+  position: absolute;
+  left: 50%;
+  top: -70px;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+}
+
+.card__button {
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-color: $blue;
+  box-shadow: 0px 0px 66px 0px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+  text-align: center;
+  color: #fdfffc;
+  border-radius: 50%;
+  border: none;
+
+  &:after {
+    content: "";
+    width: 60px;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    content: "";
+    width: 10px;
+    height: 60px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  &--green {
+    background-color: $green;
+
+    &:before {
+      content: none;
+    }
+  }
+
+
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+.card__text {
+  padding: 0 20px;
+}
+
+.card__title {
+  font-family: "Montserrat",
+    "Arial",
+    sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 105px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
